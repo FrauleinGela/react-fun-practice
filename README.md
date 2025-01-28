@@ -1,6 +1,6 @@
-# React + TypeScript + Vite
+# An app designed to explore new features from the latest React
 
-An app designed to explore new features from the latest React
+ React + TypeScript + Vite
 
 ## Expanding the ESLint configuration
 
