@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  font-size: 1rem;
 }
 
 html {
@@ -9,7 +10,7 @@ html {
   line-height: 1.5;
 
   color: #ebe7ef;
-  background: radial-gradient(#280a48, #20043d);
+  background: linear-gradient(135deg, #8a84e2, #84fab0);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,25 +20,34 @@ html {
   min-height: 80rem;
 }
 
-main {
-  width: 90%;
-  max-width: 50rem;
-  margin: auto;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 #core-concepts {
   padding: 2rem;
   border-radius: 6px;
-  background-color: #140524;
+  background-color: #1d3743;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+#core-concepts h2 {
+  text-align: center;
 }
 
 main h2 {
   text-align: center;
-  font-family: "Roboto Condensed", sans-serif;
   margin: 0 0 1.5rem 0;
-  color: #a18aba;
+  color: #8364b0;
 }
+
+main h3 {
+  text-align: center;
+  color: #8364b0;
+}
+
 
 #core-concepts ul {
   list-style: none;
@@ -89,27 +99,26 @@ main h2 {
   border: none;
   border-radius: 6px;
   background-color: transparent;
-  color: #a18aba;
-  font-family: "Roboto Condensed", sans-serif;
+  color: #8364b0;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 #examples menu button:hover {
-  background-color: #1b082f;
+  background-color: #8964b0;
   color: #ebe7ef;
 }
 
 #examples menu button.active {
-  background-color: #7925d3;
+  background-color: #8964b0;
   color: #ebe7ef;
 }
 
 #tab-content {
   padding: 1rem;
   border-radius: 6px;
-  background-color: #2f1d43;
+  background-color: #1d3743;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -119,4 +128,235 @@ main h2 {
 
 #tab-content code {
   font-size: 1rem;
+}
+
+#essentials {
+  margin: auto 17rem;
+}
+
+#navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+
+
+#navigation a.active {
+  text-decoration: underline !important;
+}
+
+#navigation a:hover {
+  text-decoration: underline;
+}
+
+#navigation a {
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+#navigation ul {
+  background-color: white;
+  list-style: none;
+  display: flex;
+  gap: 7rem;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+#navigation ul {
+  padding: 1rem auto;
+}
+
+
+/*
+ ----------------- Game board -----------------
+*/
+
+
+#players {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  gap: 2rem;
+}
+
+#players li {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+}
+
+#players.highlight-player li.active {
+  border: 0.1rem solid #d0adee;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+#players.highlight-player li.active .player-name,
+#players.highlight-player li.active .player-symbol {
+  color: #f6e35a;
+}
+
+#players button {
+  width: 3rem;
+  border: none;
+  background: none;
+  color: white;
+  border: 0.1rem solid #8364b0;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+}
+
+#players button:hover {
+  background-color: #8364b0;
+}
+
+.player {
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.player-name {
+  display: inline-block;
+  width: 10rem;
+  font-size: 1rem;
+  color: #e1dec7;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.player input {
+  font: inherit;
+  font-size: 1rem;
+  width: 10rem;
+  border: none;
+  padding: 0.5rem;
+  animation: pulse-text 2s infinite;
+  background-color: #d0adee;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+
+.player-symbol {
+  font-size: 1rem;
+  color: #e1dec7;
+}
+
+
+#pre-game {
+  text-align: center;
+}
+
+#pre-game button {
+  cursor: pointer;
+  background: none;
+  color: #d0adee;
+  border: none;
+  font-family: 'Caprasimo', cursive;
+  font-size: 4rem;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+  animation: pulse-text-size 2s infinite ease-out;
+}
+
+#game-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+.gameboard-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  display: relative
+}
+
+ul#game {
+  display: flex;
+  justify-content: center;
+  background-color: #d0adee;
+}
+
+#game button {
+  width: 8rem;
+  height: 8rem;
+  border: none;
+  background-color: white;
+  color: #3f3b00;
+  font-size: 5rem;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+#game-over button:hover {
+  box-shadow: 0 0 20px rgba(255, 187, 0, 0.8);
+}
+
+#game-container {
+  margin: auto 8rem;
+  justify-content: center;
+
+}
+
+
+#game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(40, 38, 23, 0.95);
+  animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.65, 0.52) forwards;
+}
+
+#game-over h2 {
+  font-size: 4rem;
+  text-align: center;
+  color: #8364b0;
+  margin: 0;
+}
+
+#game-over p {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+
+#game-over button {
+  border: none;
+  background: none;
+  color: white;
+  border: 0.1rem solid #8364b0;
+  cursor: pointer;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+}
+
+#game-over button:hover {
+  background-color: #8364b0;
+  box-shadow: 0 0 20px rgba(183, 0, 255, 0.8);
+
 }

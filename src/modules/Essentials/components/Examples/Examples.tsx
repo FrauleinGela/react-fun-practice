@@ -1,19 +1,19 @@
-import { useState } from "react";
-import { TabButton } from "../TabButton";
-import { EXAMPLES } from "../../data/data";
-import { Section } from "../../shared/components/Section";
-import { Tabs } from "../../shared/components/Tabs";
+import { useState } from 'react';
+import { TabButton } from '../TabButton/TabButton';
+import { EXAMPLES } from '../../../../data/data';
+import { Section } from '../../../../common/components/Section';
+import { Tabs } from '../../../../common/components/Tabs';
 
 export const Examples = () => {
-  const [selectedTab, setSelectedTab] = useState<keyof typeof EXAMPLES | "">(
-    ""
+  const [selectedTab, setSelectedTab] = useState<keyof typeof EXAMPLES | ''>(
+    ''
   );
 
   const handleSelect = (tabName: keyof typeof EXAMPLES) =>
     setSelectedTab(tabName);
 
   return (
-    <Section id="examples" title="Examples">
+    <Section id='examples' title='Examples'>
       <Tabs
         buttons={
           <>
@@ -29,7 +29,7 @@ export const Examples = () => {
           </>
         }
       >
-        <div id="tab-content">
+        <div id='tab-content'>
           {!selectedTab && <p>Please select a topic</p>}
           {selectedTab && (
             <>
